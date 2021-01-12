@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!--RWD響應式-->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    
+    <title>第七組</title>
+    <style>
+        body{
+            font-family:微軟正黑體;
+        }
+    </style>
+  </head>
+  <body>
+    
+    <div class="container">
+        <h1 style="text-align:center">第七組的網站</h1>
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">第七組</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="https://ic.nkust.edu.tw/">智商系</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        練習程式
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/temp/">氣溫</a>
+                        <a class="dropdown-item" href="/admin/">後臺管理</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+        <font size=4.5><b><u>最高最低氣溫年份</u></b></font>
+        <button class="btn btn-outline-light btn-sm"><a href="/highlow/2015">2015</a></button>
+        <button class="btn btn-outline-light btn-sm"><a href="/highlow/2016">2016</a></button>
+        <button class="btn btn-outline-light btn-sm"><a href="/highlow/2017">2017</a></button>
+        
+        <div style="background-image:url('/static/taiwan.png');width:960px;height:523px;">
+            <table>
+                <script>
+                    var n=1;
+                    for(i=1;i<=18;i++){
+                        document.write("<tr style='height: 30px;'>");
+                        for(j=1;j<=10;j++){
+                            document.write("<td style='width: 96px;'>");
+                            if (n==8){
+                                document.write("<button'><a href='基隆市'>基隆市</a></button>");
+                            }else if(n==19){
+                                document.write("<button'><a href='新北市'>新北市</a></button>");
+                            }else if(n==49){
+                                document.write("<button'><a href='宜蘭縣'>宜蘭縣</a></button>");
+                            }else if(n==88){
+                                document.write("&emsp;<button'><a href='花蓮縣'>花蓮縣</a></button>");
+                            }else if(n==138){
+                                document.write("<button'><a href='臺東縣'>臺東縣</a></button>");
+                            }else if(n==146){
+                                document.write("<button'><a href='屏東縣'>屏東縣</a></button>");
+                            }else if(n==125){
+                                document.write("<button'><a href='高雄市'>高雄市</a></button>");
+                            }else if(n==105){
+                                document.write("<button'><a href='臺南市'>臺南市</a></button>");
+                            }else if(n==85){
+                                document.write("<button'><a href='嘉義市'>嘉義市</a></button>");
+                            }else if(n==95){
+                                document.write("<button'><a href='嘉義縣'>嘉義縣</a></button>");
+                            }else if(n==75){
+                                document.write("<button'><a href='雲林縣'>雲林縣</a></button>");
+                            }else if(n==65){
+                                document.write("&emsp;<button'><a href='彰化縣'>彰化縣</a></button>");
+                            }else if(n==56){
+                                document.write("<button'><a href='臺中市'>臺中市</a></button>");
+                            }else if(n==7){
+                                document.write("<button'><a href='臺北市'>臺北市</a></button>");
+                            }else if(n==16){
+                                document.write("&emsp;<button'><a href='桃園市'>桃園市</a></button>");
+                            }else if(n==26){
+                                document.write("<button'><a href='新竹縣'>新竹縣</a></button>");
+                            }else if(n==36){
+                                document.write("<button'><a href='新竹市'>新竹市</a></button>");
+                            }else if(n==46){
+                                document.write("<button'><a href='苗栗縣'>苗栗縣</a></button>");
+                            }else if(n==77){
+                                document.write("<button'><a href='南投縣'>南投縣</a></button>");
+                            }else{
+                                document.write('');
+                            }
+                            document.write("</td>");
+                            n+=1;
+                        }
+                        document.write("</tr>");
+                    }
+                </script>
+            </table>
+        </div>
+        
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} 
+    2015-2017 台灣歷年氣候
+{% endblock %}
+{% block titlemessage %}{% endblock %}
+{%block content%}
+        <button class="btn btn-outline-light btn-sm"><a href="/temp"><font size=4.5><strong>全縣市</strong></font></strong></a></button>
+        <br>
+        <font size=4.5><b><u>最高最低氣溫年份</u></b></font>
+        <button class="btn btn-outline-light btn-sm"><a href="/highlow/2015">2015</a></button>
+        <button class="btn btn-outline-light btn-sm"><a href="/highlow/2016">2016</a></button>
+        <button class="btn btn-outline-light btn-sm"><a href="/highlow/2017">2017</a></button>
+
+        <center>
+            <table width=800>
+              <tr><td>
+            <canvas id="myChart" width="800" height="400"></canvas>
+            </td></tr>
+            </table>
+            </center>
+            <script>
+                
+                var ctx = document.getElementById("myChart").getContext('2d');
+                var data = {
+                    labels : ["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],
+                    datasets : [
+                        {	
+                            label:'2015',
+                            backgroundColor:'rgba(40,161, 121, 0.1)',
+                            borderColor:'#4EFEB3	',
+                            data : [{% for item in data %}
+                                        '{{item.temp}}',
+                                    {% endfor %} ],
+                            fill: false,
+                        },
+                        {	
+                            label:'2016',
+                            backgroundColor:'rgba(40,161, 121, 0.1)',
+                            borderColor:'#CA8EFF',
+                            data : [{% for item1 in data2 %}
+                                        '{{item1.temp}}',
+                                    {% endfor %} ],
+                            fill: false,
+                        },
+                        {	
+                            label:'2017',
+                            backgroundColor:'rgba(40,161, 121, 0.1)',
+                            borderColor:'#8080C0',
+                            data : [{% for item1 in data3 %}
+                                        '{{item1.temp}}',
+                                    {% endfor %} ],
+                            fill: false,
+                        },
+                        
+                    ],
+                    borderColor:"rgba(151,187,205,1)"
+                }
+                var myLineChart = new Chart(ctx, {
+                    type: 'line',
+                    data: data,
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                tension: 0,
+                            }]
+                        }
+                    }
+                });
+
+            </script>
+        
+
+       
+    </div>
+{% endblock %}

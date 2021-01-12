@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} 
+    2015-2017 台灣歷年氣候
+{% endblock %}
+{% block titlemessage %}{% endblock %}
+{%block content%}
+
+<table class="table table-bordered">
+    <thead>
+      <tr class="table-active">
+        <th scope="col"><center>年份</center></th>
+        <th scope="col"><center>最高最低氣溫</center></th>
+        <th scope="col"><center>縣市與氣溫</center></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row" rowspan=2><center>{{year}}</center></th>
+        <td align=center><span style="color:red;">最高</span></td>
+        <td align=center><span style="color:red;">{{high_temp}}</span></td>
+      </tr>
+      <tr>
+        <td align=center><span style="color:blue;">最低</span></td>
+        <td align=center><span style="color:blue;">{{low}}</span></td> 
+      </tr>
+    </tbody>
+  </table>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} 
+    2015-2017 台灣歷年氣候
+{% endblock %}
+{% block titlemessage %}{% endblock %}
+
+{%block content%}
+    <button class="btn btn-outline-light btn-sm"><a href="/temp"><font size=4.5><strong>全縣市</strong></font></strong></a></button>
+    <br>
+    <font size=4.5><b><u>最高最低氣溫年份</u></b></font>
+    <button class="btn btn-outline-light btn-sm"><a href="/highlow/2015">2015</a></button>
+    <button class="btn btn-outline-light btn-sm"><a href="/highlow/2016">2016</a></button>
+    <button class="btn btn-outline-light btn-sm"><a href="/highlow/2017">2017</a></button>
+
+{% endblock %}
